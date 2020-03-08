@@ -1,0 +1,16 @@
+.product {
+    padding: 1em;
+    margin: 1em;
+    max-width: 25%;
+    background: #ffffff;
+    border: 1px solid #2196f3
+}
+
+.product img {
+    width: 75%;
+    margin: 0;
+}
+
+.price {
+    color: #388e3c
+}
