@@ -9,7 +9,7 @@ class Cart extends React.Component {
             {
               cartItem.length === 0 ? "سبد خرید خالی است" : 
               <div>
-                تعداد محصولات سبد خرید : {cartItem.length}
+                تعداد محصولات سبد خرید : <button className="count" > {cartItem.length}</button>
               </div>
             }
              {
@@ -18,15 +18,15 @@ class Cart extends React.Component {
                 <ul>
                   {cartItem.map(item => 
                     <div>
-
-                      {item.title}
+                       
+                        {item.title}
 
                       <div>
                       <button 
                         className="btn btn-danger delete"
                         onClick={(e) => this.props.handleRemove(e, item)}
                       >
-                        حذف محصول
+                        حذف 
                       </button>
                       </div>
                     </div>
