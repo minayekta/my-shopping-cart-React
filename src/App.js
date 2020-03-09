@@ -9,12 +9,13 @@ class App extends React.Component {
 
   constructor(props) {
     super(props)
-    this.state = { products: [] }
+    this.state = { products: [] 
+    , cartItem :[] }
     
   }
 
   componentWillMount() {
-    fetch("http://localhost:8000/products")
+    fetch("http://localhost:3002/products")
       .then(res => res.json())
       .then(data => this.setState({products: data}))
       }
@@ -22,19 +23,24 @@ class App extends React.Component {
   
 
   render() {
+    console.log("Test", this.state.products)
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col-md-8">
+      <div className="container text-center">
+     
+          <div className="col-md-12">
+          
             <Product 
               products = {this.state.products}   />
               
          
-          </div>  
-          <div className="col-md-4">
-            <Cart />
-        </div>
+          
+          
       </div>
+      <div className="container text-center">
+      <div className="col-md-10">
+            <Cart cartItem= {this.state.cartItem}/>
+        </div>
+        </div>
          </div>
         
           
@@ -43,4 +49,4 @@ class App extends React.Component {
   }
 }
 
-export default App
+export default App;
