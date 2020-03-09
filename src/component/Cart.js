@@ -12,9 +12,37 @@ class Cart extends React.Component {
                 تعداد محصولات سبد خرید : {cartItem.length}
               </div>
             }
+             {
+              cartItem.length > 0 &&
+              <div>
+                <ul>
+                  {cartItem.map(item => 
+                    <div>
+
+                      {item.title}
+
+                      <div>
+                      <button 
+                        className="btn btn-danger delete"
+                        onClick={(e) => this.props.handleRemove(e, item)}
+                      >
+                        حذف محصول
+                      </button>
+                      </div>
+                    </div>
+                  )}
+                </ul>
+                <p>
+                  مجموع: {cartItem.reduce((a, b) => a + b.price * b.count, 0)} تومان
+                </p>
+              </div>
+            }
+          
+      
           </div>
         )
       }
+      
 }
 
 

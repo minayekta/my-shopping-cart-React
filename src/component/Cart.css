@@ -1,4 +1,16 @@
 .cart{
-    background-color: darkorchid;
+    background-color: #f89ee9fb;
     text-align: center;
+    margin: 20px;
+    padding: 50px;
+    border-radius: 2em;
+    /* height: 3em; */
+    
+}
+
+.delete{
+    /* background-color: fuchsia; */
+    
+    margin-top: 1em;
+    border-radius: 5em;
 }

@@ -32,7 +32,8 @@ class Product extends React.Component{
                 <p className="price">
                 T  {product.price} 
                 </p>
-                <button className="btn btn-primary button" >
+                <button className="btn btn-primary button"
+                onClick={(e) => this.props.handleAddToCart(e, product)} >
                   افزودن به سبد خرید
                 </button>
               </div>
